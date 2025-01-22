@@ -1,4 +1,4 @@
-model_path="/data/base_models/Baichuan2-7B-Chat/"
+model_path="/root/data/models/baichuan-inc/Baichuan2-7B-Chat/"
 #model_path="/data/pretrain_models/Xinglin-7B-20241105-1-1e7"
 
 python tcm_exam_eval.py \
