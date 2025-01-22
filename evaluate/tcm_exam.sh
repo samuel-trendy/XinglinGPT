@@ -1,9 +1,9 @@
-model_path="/root/data/models/baichuan-inc/Baichuan2-7B-Chat/"
+model_path="/root/data/models/THUDM/glm-4-9b-chat/"
 #model_path="/data/pretrain_models/Xinglin-7B-20241105-1-1e7"
 
 python tcm_exam_eval.py \
     --model_name_or_path ${model_path} \
-    --save_dir ./results/Baichuan2-7B-Chat-tcm \
+    --save_dir ./results/glm-4-9b-chat-tcm \
     --data_dir ./data \
     --num_few_shot 5
 #python tcm_exam_eval.py \
