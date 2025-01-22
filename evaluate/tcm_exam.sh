@@ -4,7 +4,7 @@ model_path="/data/base_models/Baichuan2-7B-Chat/"
 python tcm_exam_eval.py \
     --model_name_or_path ${model_path} \
     --save_dir ./results/Baichuan2-7B-Chat-tcm \
-    --data_dir ./tcm_exam \
+    --data_dir ./data \
     --num_few_shot 5
 #python tcm_exam_eval.py \
 #    --model_name_or_path /data/base_models/Qwen2-7B/ \
