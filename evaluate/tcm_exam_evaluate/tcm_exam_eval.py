@@ -64,14 +64,14 @@ def eval(model, tokenizer, subject, dev_df, test_df, num_few_shot, max_length, c
             input_ids = torch.tensor(input_ids, device=model.device)
             logits = model(input_ids)["logits"]
             last_token_logits = logits[:, -1, :]
-            #print(last_token_logits.dtype)
+            print(last_token_logits.dtype)
             if last_token_logits.dtype in {torch.bfloat16, torch.float16}:
                 last_token_logits = last_token_logits.to(dtype=torch.float32)
             choice_logits = last_token_logits[:, choice_ids].detach().cpu().numpy()
-            #print(choice_logits)
+            print(choice_logits)
             conf = softmax(choice_logits[0])[choices.index(label)]
             pred = {0: "A", 1: "B", 2: "C", 3: "D", 4:"E"}[np.argmax(choice_logits[0])]
-        #print(prompt,label,pred)
+        print(prompt,label,pred)
         all_preds += pred
         all_conf.append(conf)
         cors.append(pred == label)

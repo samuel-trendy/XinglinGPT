@@ -1,9 +1,9 @@
-model_path="/root/data/models/THUDM/glm-4-9b-chat/"
-#model_path="/data/pretrain_models/Xinglin-7B-20241105-1-1e7"
+model_path="/root/data/models/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+result_path="./results/deepseek-qwen-7b-tcm"
 
 python tcm_exam_eval.py \
     --model_name_or_path ${model_path} \
-    --save_dir ./results/glm-4-9b-chat-tcm \
+    --save_dir ${result_path} \
     --data_dir ./data \
     --num_few_shot 5
 #python tcm_exam_eval.py \
